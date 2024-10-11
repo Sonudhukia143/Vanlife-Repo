@@ -1,0 +1,8 @@
+body{
+  background-color: black;
+  background-image: url('./assets/bgImage.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
