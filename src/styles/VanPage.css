@@ -1,0 +1,26 @@
+.mainDivVan{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.vanDiv{
+    color: black;
+    font-size: 0.5rem;
+    background-color: white;
+    display: inline;
+    width: fit-content;
+    margin: 5px;
+    padding: 5px;
+    border: 1px dotted grey;
+    border-radius: 5px;
+}
+.vanDiv p{
+    margin: 0%;
+    font-weight: bold;
+}
+
+.vanImgSpan img{
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+}
