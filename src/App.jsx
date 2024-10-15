@@ -9,6 +9,7 @@ import HomePage from './pageRoutes/HomePage';
 import Contact from './pageRoutes/Contact';
 import Navbar from './pageRoutes/Navbar';
 import VanPage from './pageRoutes/VanPage';
+import VanDetails from './pageRoutes/VanDetails';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/about" element={ <AboutPage /> } />
       <Route  path="/contact" element={ <Contact />} />
       <Route path="/vans" element = { <VanPage />} />
+      <Route path="/vans/:id" element = { <VanDetails /> } />
       </Routes>
     </Router>
     </>

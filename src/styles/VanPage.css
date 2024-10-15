@@ -1,26 +1,55 @@
-.mainDivVan{
+.mainDivVan {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
 }
 
-.vanDiv{
-    color: black;
-    font-size: 0.5rem;
-    background-color: white;
+.vanType{
+    background-color: aquamarine;
     display: inline;
-    width: fit-content;
-    margin: 5px;
-    padding: 5px;
+    padding: 2px;
+    margin-top: 4px;
+    border: 1px dotted gainsboro;
+    border-radius: 4px;
+}
+
+.vanDiv {
+    color: black;
+    font-size: 0.8rem; /* Slightly larger for readability */
+    background-color: white;
+    padding: 10px;
     border: 1px dotted grey;
     border-radius: 5px;
+    width: 100%; /* Full width for better responsiveness */
+    text-align: center; /* Center align the content */
 }
-.vanDiv p{
-    margin: 0%;
+
+.vanDiv p {
+    margin: 0;
     font-weight: bold;
 }
 
-.vanImgSpan img{
-    width: 70px;
-    height: 70px;
+.vanDiv a {
+    text-decoration: none;
+    color: black;
+}
+
+.vanImgSpan img {
+    width: 100%; /* Ensure the image takes full width of its container */
+    height: auto; /* Maintains aspect ratio */
     border-radius: 5px;
+    object-fit: cover; /* Avoids stretching by cropping the image to fit the container */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .mainDivVan {
+        grid-template-columns: 1fr 1fr; /* Two columns for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .mainDivVan {
+        grid-template-columns: 1fr; /* One column for mobile devices */
+    }
 }

@@ -1,0 +1,13 @@
+.van-detail{
+    width: 80vh;
+    margin: auto;
+    background-color: aliceblue;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.van-detail img{
+    width: 100%;
+    border: 1px solid aquamarine;
+    border-radius: 1vh;
+}
