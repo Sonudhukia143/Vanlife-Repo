@@ -8,7 +8,7 @@ import HomePage from './pageRoutes/HomePage';
 import Contact from './pageRoutes/Contact';
 import VanPage from './pageRoutes/VanPage';
 import VanDetails from './pageRoutes/VanDetails';
-import Layout from './components/layout';
+import Layout from './components/Layout';
 import Host from './pageRoutes/hostPageRoutes/Host';
 import HostIncome from './pageRoutes/hostPageRoutes/HostIncome';
 import HostReviews from './pageRoutes/hostPageRoutes/HostReviews';
