@@ -14,13 +14,15 @@ export default function VanPage() {
     const vansData = vans.map(van => {
         return (
             <div key={van.id} className="vanDiv">
-                <Link to={`/vans/${van.id}`}>
-                    <span className="vanImgSpan">
+                <Link to={`/vans/${van.id}`} className="single-van-wrapper">
+                <div>
+                <span className="vanImgSpan">
                         <img src={van.imageUrl}></img>
                     </span>
                     <p>{van.name}</p>
                     <p>{van.price}$/Day</p>
                     <p className="vanType"><i>{van.type}</i></p>
+                </div>
                 </Link>
             </div>
         )

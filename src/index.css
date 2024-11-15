@@ -1,7 +1,22 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr auto; /* Content takes remaining space, footer takes auto height */
+}
+
 body{
   background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
 }
+
+#root{
+  display: flex;
+  flex-direction: column;
+}
+
