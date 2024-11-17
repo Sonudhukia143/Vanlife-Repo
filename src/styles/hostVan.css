@@ -1,0 +1,66 @@
+.host-van-single{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: lightcyan;
+    padding: 10px;
+    border-radius: 3vh;
+    border: 1.5px  dotted grey;
+  }
+  
+  .vanDiv{
+    transition: box-shadow 0.4s ease;
+    padding: 0px;
+    margin-bottom: 10vh;
+    width: fit-content;
+    box-shadow: 4px 4px 4px rgb(211, 181, 181); /* Creates a subtle shadow */
+  }
+  
+  .vanDiv:hover{
+    box-shadow: none;
+    transform: translate(5px);
+  }
+  
+  .single-van-wrapper{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+  }
+  
+  .vanImgSpan{
+    padding: 5%;
+    display: flex;
+  }
+
+  .hostVanNavLinksDiv{
+    width: 100%;
+    display:flex;
+    justify-content:space-between;
+    margin: 0%;
+  }
+
+  .hostVanNavLinks{
+    padding: 1vh;
+    margin-top: 1vh;
+    margin-bottom: 0px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .hostVanDetails{
+    background-color: antiquewhite;
+    padding: 1vh;
+    border-radius: 0vh 0vh 2vh 2vh;
+    box-shadow: 2px 6px 4px aquamarine;
+  }
+
+  .vanPage{
+    width: 100%;
+    background-color: aliceblue;
+    padding: 1vh;
+    margin: 1vh;
+    display: flex;
+    justify-content: space-evenly;
+  }
+

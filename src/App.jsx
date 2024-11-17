@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 import './styles/VanPage.css'
+import './styles/hostVan.css'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.esm'
 import AboutPage from './pageRoutes/AboutPage';

@@ -28,25 +28,27 @@ export default function HostVanDetails() {
                         </span>
                     </div>
 
-                    <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-                        <NavLink 
+                    <div className="hostVanNavLinksDiv">
+                        <NavLink className="hostVanNavLinks"
                           to="."
                           end
                         >
                             Details
                         </NavLink>
-                        <NavLink
+                        <NavLink className="hostVanNavLinks"
                           to="pricing"
                         >
                             Pricing
                         </NavLink>
-                        <NavLink
+                        <NavLink className="hostVanNavLinks"
                           to="photos"
                         >
                             Photos
                         </NavLink>
                     </div>
-                    <Outlet context={[van]}/>
+                    <div className="hostVanDetails">
+                        <Outlet context={[van]}/>
+                    </div>
 
                 </div> : <h1>Loading...</h1>
             }

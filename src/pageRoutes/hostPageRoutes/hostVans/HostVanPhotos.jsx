@@ -1,14 +1,16 @@
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useParams } from "react-router-dom";
 
 export default function HostVanPhotos () {
     const [van] = useOutletContext();
 
+    console.log(useParams());
+
     return (
-            <span style={{display:"grid",gridTemplateColumns:"1fr 2fr",gridTemplateRows:"2fr"}}>
-                <img src={van.imageUrl} style={{display:"flex",height:"20vh",padding:"2vh"}}/>
+            <span style={{display:"grid",gridTemplateColumns:"1fr 1fr",gridTemplateRows:"1fr"}}>
+                <img src={van.imageUrl} style={{display:"flex",height:"20vh",padding:"1vh",maxWidth:"20vh"}}/>
                 <b>
-                    <p style={{padding:"5vh"}}>
-                        Bonus Tip: Always review photos after the shoot and reshoot if necessary to avoid missed opportunities. A little preparation goes a long way in creating an appealing and professional gallery!
+                    <p style={{padding:"1vh"}}>
+                        Bonus Tip: Always review photos after the shoot and reshoot.
                     </p>
                 </b>
             </span>

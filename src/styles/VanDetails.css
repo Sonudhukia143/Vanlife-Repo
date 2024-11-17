@@ -1,13 +1,48 @@
+.site-wrapper{
+    flex: 1;
+  }
+
+  .main-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
 .van-detail{
-    width: 80vh;
+    width: 80%;
     margin: auto;
-    background-color: aliceblue;
-    padding: 10px;
-    margin-top: 10px;
+    background-color: white;
+    padding: 4vh;
+    margin: 4vh auto;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 4px 4px 4px rgb(211, 181, 181); /* Creates a subtle shadow */
 }
 .van-detail img{
-    width: 100%;
+    max-width: 80%;
     border: 1px solid aquamarine;
     border-radius: 1vh;
 }
+
+.backToVansLink{
+    text-decoration: none;
+    color: rgb(56, 122, 121);
+    font-weight: 700;
+    background-color: blanchedalmond;
+    padding: 2vh;
+    margin: 2vh auto;  
+    transition: 0.4s ease;
+    box-shadow: 2px 4px 6px rgb(140, 130, 130);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 1vh;
+  }
+  
+  .backToVansLink:hover{
+    box-shadow: none;
+    transform: translateZ(2px);
+    font-weight: 500;
+  }
