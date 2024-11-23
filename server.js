@@ -19,8 +19,14 @@ createServer({
         this.namespace = "api"
         this.logging = false
 
-        this.get("/vans", (schema, request) => {
-            return schema.vans.all()
+        this.get("/vans", (schema) => {
+            const randomNum = Math.ceil(Math.random()*10);
+
+            if(randomNum <= 10){
+                return schema.vans.all()
+            }else{
+                throw new Error (JSON.stringify({status:'404', message:"unable to fetch vans from the server"}));
+            }
         })
         
         this.get("/vans/:id", (schema, request) => {
@@ -28,7 +34,7 @@ createServer({
             return schema.vans.find(id)
         })
 
-        this.get("/host/vans" , (schema,request) => {
+        this.get("/host/vans" , (schema) => {
             return schema.vans.where({ hostId: "123"})
         })
 

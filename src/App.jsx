@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {  Route,createBrowserRouter,RouterProvider, createRoutesFromElements } from 'react-router-dom';
 import './App.css'
 import './styles/VanPage.css'
 import './styles/hostVan.css'
@@ -7,7 +7,7 @@ import '../node_modules/bootstrap/dist/js/bootstrap.esm'
 import AboutPage from './pageRoutes/AboutPage';
 import HomePage from './pageRoutes/HomePage';
 import Contact from './pageRoutes/Contact';
-import VanPage from './pageRoutes/VanPage';
+import VanPage, { loader as homePageLoader } from './pageRoutes/VanPage';
 import VanDetails from './pageRoutes/VanDetails';
 import Layout from './components/Layout';
 import Host from './pageRoutes/hostPageRoutes/Host';
@@ -19,20 +19,19 @@ import HostVanDetail from './pageRoutes/hostPageRoutes/hostVans/HostVanDetail';
 import HostVanPhotos from './pageRoutes/hostPageRoutes/hostVans/HostVanPhotos';
 import HostVanPricing from './pageRoutes/hostPageRoutes/hostVans/HostVanPricing';
 import HostVanDetails from './pageRoutes/hostPageRoutes/hostVans/HostVanDetails';
+import UndefinedPath from '../utils/UndefinedPath';
+import ErrorTemplate from '../utils/ErrorTemplate';
 
-
-
-export default function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+          <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<Contact />} />
 
-          <Route path="/vans">
-            <Route index element={<VanPage />} />
+          <Route path="/vans" >
+            <Route index element={<VanPage />} loader={homePageLoader} errorElement={<ErrorTemplate />} />
             <Route path=":id" element={<VanDetails />} />
           </Route>
 
@@ -47,9 +46,14 @@ export default function App() {
               <Route path="pricing" element={<HostVanPricing />} />
             </Route>
           </Route>
-
+          <Route path="*" element={<UndefinedPath/>} />
         </Route>
-      </Routes>
-    </Router>
+    </>
+  )
+)
+
+export default function App() {
+  return (
+    <RouterProvider router={router} />
   )
 }

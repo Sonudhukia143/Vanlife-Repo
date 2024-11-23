@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom"
+import { useParams, Link, useLocation } from "react-router-dom"
 import '../../server.js';
 import { useEffect, useState } from "react";
 import '../styles/VanDetails.css';
@@ -6,6 +6,10 @@ import '../styles/VanDetails.css';
 export default function VanDetails() {
     const { id } = useParams();
     const [vans, setVans] = useState([]);
+
+    const param = useLocation().state.userSearchParams;
+    const previousParams =  param != null ? `?${param}` : "";
+
 
     useEffect(() => {
         fetch("/api/vans")
@@ -17,7 +21,7 @@ export default function VanDetails() {
 
     return (
         <div style={{display:"contents"}}>
-           <Link to={"/vans"} className="backToVansLink">← Back to Vans</Link>
+           <Link to={`/vans/${previousParams}`} className="backToVansLink">← Back to Vans</Link>
 
             {
                 van ? <div className="van-detail">
